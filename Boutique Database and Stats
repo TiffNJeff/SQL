@@ -1,0 +1,25 @@
+--Create a clothing store database
+
+CREATE TABLE boutique (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, section INTEGER);
+
+INSERT INTO boutique VALUES (1, "red dress", 4, 10.99, 3);
+INSERT INTO boutique VALUES (2, "black shoes",19,  15.99, 6);
+INSERT INTO boutique VALUES (3, "sunglasses", 3, 7.99, 4);
+INSERT INTO boutique VALUES (4, "glitter spray", 6, 3.99, 4);
+INSERT INTO boutique VALUES (5, "lipstick", 15, 9.99, 4);
+INSERT INTO boutique VALUES (6, "leather jacket", 7, 19.99, 5);
+INSERT INTO boutique VALUES (7, "belt",13,  5.99, 2);
+INSERT INTO boutique VALUES (8, "heels", 4, 17.99, 6);
+INSERT INTO boutique VALUES (9, "gold earrings", 23, 5.99, 1);
+INSERT INTO boutique VALUES (10, "silver earrings", 8, 4.99, 1);
+INSERT INTO boutique VALUES (11, "gold necklaces", 5, 8.99, 1);
+INSERT INTO boutique VALUES (12, "silver necklaces",3, 7.99, 1);
+INSERT INTO boutique VALUES (13, "gold rings", 12, 4.99, 1);
+INSERT INTO boutique VALUES (14, "siver rings", 9, 3.99, 1);
+INSERT INTO boutique VALUES (15, "hair spray", 9, 10.99, 4);
+
+--display the database ordered by section
+SELECT * FROM boutique ORDER BY section;
+
+--what is the sum of every price for all items
+SELECT SUM (price) FROM boutique;
